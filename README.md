@@ -378,11 +378,8 @@ nnoremap <silent> <leader>vfr :ViraFilterReporter<cr>
 nnoremap <silent> <leader>vfs :ViraFilterStatuses<cr>
 nnoremap <silent> <leader>vft :ViraFilterTypes<cr>
 
-function! Enter_ViraActiveIssue()
-    let g:vira_active_issue = input("Enter issue.key: ")
-    ViraReport
-endfunction
-nnoremap <silent> <leader>vei :call Enter_ViraActiveIssue()<cr>
+" Projects/Boards
+nnoremap <silent> <leader>vbm :ViraLoadProject __default__<cr>
 
 " Status
 statusline+=%{ViraStatusline()}
